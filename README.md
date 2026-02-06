@@ -55,7 +55,8 @@ O frontend usa proxy para `/api` apontando ao backend.
 - Root directory: `frontend`
 - Build command: `npm run build`
 - Output directory: `dist`
-- Variáveis de ambiente: nenhuma necessária
+- Variáveis de ambiente:
+  - `VITE_BASE_PATH=/` (para Vercel)
 
 ### Backend (Render)
 - Root directory: `backend`
@@ -68,7 +69,7 @@ O frontend usa proxy para `/api` apontando ao backend.
 
 1. Garante que o `base` no `frontend/vite.config.js` está com o nome do repo:
 ```
-base: "/WebsiteLOL/"
+VITE_BASE_PATH=/WebsiteLOL/
 ```
 2. Faz build e deploy:
 ```
